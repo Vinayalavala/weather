@@ -35,7 +35,8 @@ body{
     outline: 0;
     background-color: #ebfffc;
     color:#555;
-    padding: 10px 50px;
+    padding: 7px 50px;
+    padding-right:10px;
     height: 60px;
     border-radius: 30px;
     flex:1;
