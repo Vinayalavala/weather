@@ -12,6 +12,7 @@ body{
 }
 
 .card{
+    align-content: center;
     width: 90%;
     max-width: 470px;
     background: rgb(0,36,7);
@@ -21,6 +22,7 @@ body{
     padding: 40px 35px;
     text-align: center;
     border-radius: 15px;
+    overflow: auto;
 }
 
 .search{
@@ -103,11 +105,3 @@ body{
     display:block;
 }
 
-.error{
-    text-align: left;
-    margin-left: 10px;
-    font-size: 14px;
-    margin-top: 10px;
-    display:none;
-    
-}
