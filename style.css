@@ -6,19 +6,17 @@
 }
 
 body{
-    align-items: left;
     background-color: #222;
     
 }
 
 .card{
-    align-content: center;
-    width: 100%;
-    max-width: 380px;
+    width: 90%;
+    max-width: 470px;
     background: rgb(0,36,7);
     background: linear-gradient(142deg, rgba(0,36,7,1) 0%, rgba(124,14,68,1) 35%, rgba(0,114,255,0.9850533963585434) 100%);
     color:#fff;
-    margin: auto 10px 0px;
+    margin: auto 0px 0px;
     padding: 40px 35px;
     text-align: center;
     border-radius: 15px;
@@ -51,14 +49,14 @@ body{
     outline: 0;
     background-color: #ebfffc;
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
 
 }
 
 .search button img{
-    width:5px;
+    width:16px;
 }
 
 .weather-icon{
