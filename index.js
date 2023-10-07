@@ -6,41 +6,32 @@ const weatherIcon=document.querySelector(".weather-icon")
 
 async function checkweather(city){
     const response=await fetch(apiurl + city+`&appid=${apikey}`);
+    var data=await response.json()
+    console.log(data)
+    document.querySelector(".city").innerHTML=data.name
+    document.querySelector(".temp").innerHTML=Math.round(data.main.temp) + "°c";
+    document.querySelector(".humidity").innerHTML=data.main.humidity  + "%";
+    document.querySelector(".wind").innerHTML=data.wind.speed + "KM/H";
 
-    if(response.status==404){
-        document.querySelector(".error").style.display="block";
-        document.querySelector(".weather").style.display="none";
+    if(data.weather[0].main=="Clouds"){
+        weatherIcon.src="cloudy.png"
     }
-    else{
-        var data=await response.json()
-        document.querySelector(".city").innerHTML=data.name
-        document.querySelector(".temp").innerHTML=Math.round(data.main.temp) + "°c";
-        document.querySelector(".humidity").innerHTML=data.main.humidity  + "%";
-        document.querySelector(".wind").innerHTML=data.wind.speed + "KM/H";
-    
-        if(data.weather[0].main=="Clouds"){
-            weatherIcon.src="cloudy.png"
-        }
-        if(data.weather[0].main=="Clear"){
-            weatherIcon.src="clear.png"
-        }
-        if(data.weather[0].main=="Clouds"){
-            weatherIcon.src="cloudy.png"
-        }
-        if(data.weather[0].main=="Rain"){
-            weatherIcon.src="rain.png"
-        }
-        if(data.weather[0].main=="Drizzle"){
-            weatherIcon.src="drizzle.png"
-        }
-        if(data.weather[0].main=="Mist"){
-            weatherIcon.src="mist.png"
-        }
-        document.querySelector("weather").style.display="block"
-        document.querySelector(".error").style.display="none";
+    if(data.weather[0].main=="Clear"){
+        weatherIcon.src="clear.png"
     }
-
-   
+    if(data.weather[0].main=="Clouds"){
+        weatherIcon.src="cloudy.png"
+    }
+    if(data.weather[0].main=="Rain"){
+        weatherIcon.src="rain.png"
+    }
+    if(data.weather[0].main=="Drizzle"){
+        weatherIcon.src="drizzle.png"
+    }
+    if(data.weather[0].main=="Mist"){
+        weatherIcon.src="mist.png"
+    }
+    document.querySelector(".weather").style.display="block"
 }
 
 searchbutton.addEventListener("click",()=>{
