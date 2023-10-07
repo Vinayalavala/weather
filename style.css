@@ -14,7 +14,7 @@ body{
 .card{
     align-content: center;
     width: 80%;
-    max-width: 470px;
+    max-width: 380px;
     background: rgb(0,36,7);
     background: linear-gradient(142deg, rgba(0,36,7,1) 0%, rgba(124,14,68,1) 35%, rgba(0,114,255,0.9850533963585434) 100%);
     color:#fff;
