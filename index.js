@@ -28,6 +28,9 @@ async function checkweather(city){
     if(data.weather[0].main=="Mist"){
         weatherIcon.src="mist.png"
     }
+    if(data.weather[0].main=="snow"){
+        weatherIcon.src="snow.png"
+    }
     document.querySelector(".weather").style.display="block"
 }
 
