@@ -14,13 +14,10 @@ async function checkweather(city){
     document.querySelector(".wind").innerHTML=data.wind.speed + "KM/H";
 
     if(data.weather[0].main=="Clouds"){
-        weatherIcon.src="cloudy.png"
+        weatherIcon.src="clouds.png"
     }
     if(data.weather[0].main=="Clear"){
         weatherIcon.src="clear.png"
-    }
-    if(data.weather[0].main=="Clouds"){
-        weatherIcon.src="cloudy.png"
     }
     if(data.weather[0].main=="Rain"){
         weatherIcon.src="rain.png"
