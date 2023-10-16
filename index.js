@@ -31,6 +31,9 @@ async function checkweather(city){
     if(data.weather[0].main=="snow"){
         weatherIcon.src="snow.png"
     }
+    if(data.weather[0].main=="storm"){
+        weatherIcon.src="storm.png"
+    }
     document.querySelector(".weather").style.display="block"
 }
 
