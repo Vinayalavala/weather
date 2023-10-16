@@ -51,15 +51,15 @@ body{
     border: 0;
     outline: 0;
     background-color: #ebfffc;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    border-radius: 40%;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 
 }
 
 .search button img{
-    width:16px;
+    width:20px;
 }
 
 .weather-icon{
