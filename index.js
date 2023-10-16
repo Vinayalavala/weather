@@ -28,10 +28,10 @@ async function checkweather(city){
     if(data.weather[0].main=="Mist"){
         weatherIcon.src="mist.png"
     }
-    if(data.weather[0].main=="snow"){
+    if(data.weather[0].main=="Snow"){
         weatherIcon.src="snow.png"
     }
-    if(data.weather[0].main=="storm"){
+    if(data.weather[0].main=="Storm"){
         weatherIcon.src="storm.png"
     }
     if(data.weather[0].main=="Haze"){
