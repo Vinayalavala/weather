@@ -24,7 +24,7 @@ body{
     text-align: center;
     border-radius: 15px;
     overflow: auto;
-    width: clamp(180px,75%,470);
+    
 }
 
 .search{
