@@ -131,8 +131,8 @@ body{
     background: linear-gradient(142deg, rgba(0,36,7,1) 0%, rgba(124,14,68,1) 35%, rgba(0,114,255,0.9850533963585434) 100%);
     color:#fff;
     margin-top: 2%;
-    margin-left:0% ;
-    padding: 0px 0px;
+    margin-left:15% ;
+    padding: 15px 15px;
     text-align:center;
     border-radius: 0px;
     overflow: auto;
