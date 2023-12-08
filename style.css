@@ -124,7 +124,7 @@ body{
     }
 
     .card{
-    width: 100%;
+    width: 50%;
     height:100vh;
     max-width:600px;
     background: rgb(0,36,7);
