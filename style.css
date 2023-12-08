@@ -114,3 +114,108 @@ body{
     display:block;
 }
 
+
+@media screen and (max-width:600){
+    .card{
+    width: 50%;
+    max-width:300px;
+    background: rgb(0,36,7);
+    background: linear-gradient(142deg, rgba(0,36,7,1) 0%, rgba(124,14,68,1) 35%, rgba(0,114,255,0.9850533963585434) 100%);
+    color:#fff;
+    margin-top: 2%;
+    margin-left:10% ;
+    padding: 10px 17px;
+    text-align: center;
+    border-radius: 0px;
+    overflow: auto;
+    width: clamp(180px,75%,470);
+    }
+   .search{
+    width:100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .search input{
+        border: 0;
+        outline: 0;
+        background-color: #ebfffc;
+        color:#555;
+        padding: 7px 50px ;
+        padding-right: 10px;
+        height: 60px;
+        border-radius: 30px;
+        flex:1;
+        margin-right: 16px;
+        font-size: 18px;
+
+    }
+
+    .search button{
+
+        border: 0;
+        outline: 0;
+        margin-right: 5px;
+        padding: 5px 5px;
+        padding-right: 7px;
+        padding-left: 7px;
+        padding-top: 7px;
+        background-color: #ebfffc;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+    }
+
+    .search button img{
+        width:8px;
+    }
+
+    .weather-icon{
+        width: 85px;
+        margin-top: 15px;
+    }
+
+    .weather h1{
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .weather h2{
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: -5px;
+    }
+
+    .details{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px;
+        margin-top: 25px;
+    }
+
+    .col{
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .col img{
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    .humidity,.wind,.pressure{
+        font-size: 10px;
+        margin-top: -3px;
+    }
+
+    .weather{
+        display:block;
+    }
+
+
+}
