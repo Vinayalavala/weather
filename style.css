@@ -208,7 +208,18 @@ body{
         margin-right: 5px;
     }
 
-    .humidity,.wind,.pressure{
+    .humidity{
+        white-space:pre-line;
+        font-size: 10px;
+        margin-top: -3px;
+    }
+    .wind{
+        white-space:pre-line;
+        font-size: 10px;
+        margin-top: -3px;
+    }
+    .pressure{
+        white-space:pre-line;
         font-size: 10px;
         margin-top: -3px;
     }
