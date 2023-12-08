@@ -116,29 +116,20 @@ body{
 
 
 @media screen and (max-width:600){
-    body{
-        background: linear-gradient(142deg, rgba(0,36,7,1) 0%, rgba(124,14,68,1) 35%, rgba(0,114,255,0.9850533963585434) 100%);   
-        align-items: left;
-    
-        background-color: linear-gradient(142deg, rgba(0,36,7,1) 0%, rgba(124,14,68,1) 35%, rgba(0,114,255,0.9850533963585434) 100%);   
-    }
-
     .card{
     width: 50%;
-    height:100vh;
-    max-width:600px;
+    max-width:300px;
     background: rgb(0,36,7);
     background: linear-gradient(142deg, rgba(0,36,7,1) 0%, rgba(124,14,68,1) 35%, rgba(0,114,255,0.9850533963585434) 100%);
     color:#fff;
     margin-top: 2%;
-    margin-left:15% ;
-    padding: 15px 15px;
-    text-align:center;
+    margin-left:10% ;
+    padding: 10px 17px;
+    text-align: center;
     border-radius: 0px;
     overflow: auto;
     width: clamp(180px,75%,470);
     }
-    
    .search{
     width:100%;
     align-items: center;
