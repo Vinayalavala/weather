@@ -118,7 +118,8 @@ body{
 @media screen and (max-width:600){
     .card{
     width: 50%;
-    max-width:300px;
+    max-width:100%;
+    height:auto;
     background: rgb(0,36,7);
     background: linear-gradient(142deg, rgba(0,36,7,1) 0%, rgba(124,14,68,1) 35%, rgba(0,114,255,0.9850533963585434) 100%);
     color:#fff;
