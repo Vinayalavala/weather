@@ -116,6 +116,14 @@ body{
 
 
 @media screen and (max-width:600){
+
+    header{
+    display: block;
+    justify-content:space-between;
+    align-items: center;
+    padding: 30px;
+   }
+    
     .card{
     width: 50%;
     max-width:100%;
