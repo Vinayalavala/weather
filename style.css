@@ -220,3 +220,62 @@ body{
 
 
 }
+nav,ul,li{
+    color: whitesmoke;
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.logo{
+    height: 70px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.links{
+    list-style: none;
+}
+
+.links li{
+    display:inline-block;
+    padding: 0px 20px;
+}
+
+.links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.links li:hover {
+    cursor: pointer;
+    color: rgb(64, 231, 237);
+    transition: all 0.3s ease 0s;
+}
+
+button{
+    background-color: rgb(230, 50, 40);
+    cursor: pointer;
+    padding: 6px 18px;
+    border-radius: 90px;
+    border-left: 50px;
+    border: none;
+    transition: all 0.3s ease 0s;
+    margin-left: 25px;
+}
+
+button:hover{
+    color: white;
+    padding:8px 20px;
+    background-color: rgb(182, 10, 1);
+    z-index: 1;
+}
+
+.text{
+    color: aquamarine;
+    text-align: center;
+    border: #63656f;
+}
