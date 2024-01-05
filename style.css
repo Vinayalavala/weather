@@ -279,9 +279,10 @@ button{
 }
 
 button:hover{
-    color: black;
+    box-shadow:inset  -3px -3px 5px rgb(0,36,7),inset 3px 3px 5px rgb(161, 165, 162);
+    color: rgb(0, 0, 0);
     padding:8px 20px;
-    background-color: gray);
+    background-color: rgb(119, 115, 115);
     z-index: 1;
 }
 
