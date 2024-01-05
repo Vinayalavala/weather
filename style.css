@@ -13,18 +13,19 @@ body{
 }
 
 .card{
+    box-shadow:-3px -3px 5px rgb(0,36,7), 3px 3px 5px rgb(161, 165, 162);
+    backdrop-filter: blur(30px);
     width: 100%;
     max-width:600px;
-    background: rgb(0,36,7);
-    background: linear-gradient(142deg, rgba(0,36,7,1) 0%, rgba(124,14,68,1) 35%, rgba(0,114,255,0.9850533963585434) 100%);
+    background: rgba(195, 180, 180, 0.2);
     color:#fff;
     margin-top: 5%;
-    margin-left:5% ;
-    padding: 35px 35px;
+    margin-left:30% ;
+    padding: 40px 35px;
     text-align: center;
     border-radius: 15px;
     overflow: auto;
-    
+    width: clamp(180px,75%,470);  
 }
 
 .search{
@@ -35,10 +36,11 @@ body{
 }
 
 .search input{
+    box-shadow:-3px -3px 5px rgb(0,36,7), 3px 3px 5px rgb(161, 165, 162);
     border: 0;
     outline: 0;
-    background-color: #ebfffc;
-    color:#555;
+    background-color: #5b6060;
+    color:#ffffff;
     padding: 7px 50px ;
     padding-right: 10px;
     height: 60px;
@@ -50,7 +52,7 @@ body{
 }
 
 .search button{
-
+    box-shadow:-3px -3px 5px rgb(0,36,7), 3px 3px 5px rgb(161, 165, 162);
     border: 0;
     outline: 0;
     margin-right: 10px;
@@ -265,7 +267,8 @@ header{
 }
 
 button{
-    background-color: rgb(230, 50, 40);
+    background-color: rgb(89, 82, 82);
+    box-shadow:-3px -3px 5px rgb(0,36,7), 3px 3px 5px rgb(161, 165, 162);
     cursor: pointer;
     padding: 6px 18px;
     border-radius: 90px;
@@ -276,9 +279,9 @@ button{
 }
 
 button:hover{
-    color: white;
+    color: black;
     padding:8px 20px;
-    background-color: rgb(182, 10, 1);
+    background-color: gray);
     z-index: 1;
 }
 
