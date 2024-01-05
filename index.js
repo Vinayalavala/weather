@@ -57,6 +57,6 @@ const checkbox = document.getElementById('checkbox');
             if (this.checked) {
                 body.style.backgroundColor = 'black'; 
             } else {
-                body.style.backgroundColor = 'white'; 
+                body.style.backgroundColor = 'rgb(45, 42, 42)'; 
             }
         });
