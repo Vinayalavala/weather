@@ -13,7 +13,7 @@ body{
 }
 
 .card{
-    box-shadow:-3px -3px 5px rgb(0,36,7), 3px 3px 5px rgb(161, 165, 162);
+    box-shadow:inset -3px -3px 5px rgb(26, 27, 26),inset 3px 3px 5px rgb(82, 84, 83);
     backdrop-filter: blur(15px);
     width: 100%;
     max-width:600px;
