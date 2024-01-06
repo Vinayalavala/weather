@@ -283,4 +283,8 @@ button:hover{
         display: none;
     }
 
+    .col{
+        height: 20px;
+    }
+
 }
