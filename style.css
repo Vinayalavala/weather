@@ -41,7 +41,7 @@ body{
 }
 
 .search input{
-    box-shadow:3px 3px 5px rgb(0,36,7), -3px -3px 5px rgb(161, 165, 162);
+    box-shadow:3px 3px 5px rgb(15, 15, 15), -3px -3px 5px rgb(161, 165, 162);
     border: 0;
     outline: 0;
     background-color: #5b6060;
@@ -285,6 +285,12 @@ button:hover{
 
     .col{
         height: 20px;
+    }
+
+    .search input:hover{
+        box-shadow:inset  -3px -3px 5px rgb(37, 38, 38),inset 3px 3px 5px rgb(161, 165, 162);
+        color: white;
+        backdrop-filter: blur(10px);
     }
 
 }
