@@ -161,10 +161,6 @@ header{
 .links li:hover {
     cursor: pointer;
     color: rgb(64, 231, 237);
-    transition: all 0.3s ease 0s;
-    background-color: #63656f;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 button{
