@@ -57,7 +57,6 @@ body{
 }
 
 .search button{
-
     border: 0;
     outline: 0;
     background-color: #626766;
@@ -65,7 +64,6 @@ body{
     width: 60px;
     height: 60px;
     cursor: pointer;
-
 }
 
 .search button img{
@@ -230,7 +228,7 @@ button:hover{
         padding: 20px;
     }
     .search input {
-        padding: 20px;
+        padding: 10px;
         font-size: 16px;
     }
     .weather h1 {
@@ -251,7 +249,7 @@ button:hover{
 
     .humidity, .wind, .pressure {
         font-size: 18px;
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     .checkbox{
@@ -276,6 +274,7 @@ button:hover{
 
     .col{
         height: 20px;
+        padding-top: 30px;
     }
 
     .search input:hover{
