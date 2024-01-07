@@ -136,6 +136,7 @@ header{
     width: 80px;
     cursor: pointer;
     margin-right: auto;
+    color:white;
 }
 
 .links{
@@ -222,6 +223,7 @@ button:hover{
 
 
 @media only screen and (max-width: 480px) {
+    
     .card {
         margin-left: 5%;
         width: 90%;
@@ -230,6 +232,7 @@ button:hover{
     .search input {
         padding: 10px;
         font-size: 16px;
+        margin-right:5px;
     }
     .weather h1 {
         font-size: 50px;
@@ -249,7 +252,7 @@ button:hover{
 
     .humidity, .wind, .pressure {
         font-size: 18px;
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     .checkbox{
@@ -274,12 +277,20 @@ button:hover{
 
     .col{
         height: 20px;
-        padding-top: 30px;
+        padding-top: 40px;
     }
 
     .search input:hover{
         box-shadow:inset  -3px -3px 5px rgb(37, 38, 38),inset 3px 3px 5px rgb(161, 165, 162);
         color: white;
         backdrop-filter: blur(10px);
+    }
+
+    .search{
+        width:80%;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 0;
     }
 }
