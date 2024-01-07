@@ -242,7 +242,8 @@ button:hover{
         font-size: 50px;
     }
     .logo {
-        margin-left: 100px;
+        margin-left: 60px;
+        width: 100%;
     }
 
     .details {
