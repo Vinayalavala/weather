@@ -298,4 +298,8 @@ button:hover{
         justify-content: space-between;
         padding-right: 0;
     }
+
+    .search button:hover{
+        padding:6px 18px;
+    }
 }
