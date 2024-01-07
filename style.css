@@ -235,6 +235,7 @@ button:hover{
         padding: 20px;
     }
     .search input {
+        padding-left:10px;
         padding: 20px;
         font-size: 16px;
         margin-right:5px;
