@@ -60,3 +60,10 @@ const checkbox = document.getElementById('checkbox');
                 body.style.backgroundColor = 'rgb(45, 42, 42)'; 
             }
         });
+
+const menuBars = document.querySelector('.menu-bars');
+const dropMenu = document.querySelector('.drop-menu');
+
+menuBars.addEventListener('click', function() {
+    dropMenu.classList.toggle('active');
+});
