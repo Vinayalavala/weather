@@ -11,6 +11,10 @@ body{
     transition: ease 0.3s; 
 }
 
+.drop-menu{
+    display: none;
+}
+
 .card{
     backdrop-filter: blur(10px);
     width: 100%;
@@ -61,7 +65,7 @@ body{
     outline: 0;
     background-color: #626766;
     box-shadow: 3px 3px 5px rgb(15, 15, 15), -3px -3px 5px rgb(161, 165, 162);
-    border-radius: 50%;
+    border-radius: 100%;
     width: 60px;
     height: 60px;
     cursor: pointer;
@@ -226,17 +230,27 @@ button:hover{
 @media only screen and (max-width: 480px) {
     header{
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        position: sticky;
+        top: 0;
+        background-color: #444;
+        height: 40px;
+    }
+
+    .links{
+        display: none;
     }
     
     .card {
         margin-left: 5%;
         width: 90%;
         padding: 20px;
+        z-index: 99;
     }
     .search input {
-        padding-left:10px;
-        padding: 15px;
+        padding: 20px;
         font-size: 16px;
         margin-right:5px;
     }
@@ -244,8 +258,7 @@ button:hover{
         font-size: 50px;
     }
     .logo {
-        margin-left: 60px;
-        width: 100%;
+        margin-top: 30px;
     }
 
     .details {
@@ -254,7 +267,7 @@ button:hover{
     }
 
     .col {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     .humidity, .wind, .pressure {
@@ -263,6 +276,8 @@ button:hover{
     }
 
     .checkbox{
+        margin-top: -0px;
+        margin-right: 40px;
         height: 15px;
         width: 25px;
     }
@@ -282,7 +297,7 @@ button:hover{
         display: none;
     }
 
-    .col{
+    .detail.col{
         height: 20px;
         padding-top: 40px;
     }
@@ -294,7 +309,7 @@ button:hover{
     }
 
     .search{
-        width:80%;
+        width:100%;
         align-items: center;
         display: flex;
         justify-content: space-between;
@@ -303,5 +318,47 @@ button:hover{
 
     .search button:hover{
         padding:6px 18px;
+    }
+
+    .menu-bars{
+        height: 25px;
+        margin-top: 0px;
+    }
+
+    .menu-bars:hover{
+        cursor: pointer;
+    }
+
+    .drop-menu{
+        display: flex;
+        z-index: 100;
+        background:black;
+        color: black;
+        top: 60px;
+        right: 5px;
+        left: 50px;
+        transition: ease 0.3s;
+        z-index: 100;
+        position: sticky;
+        transform: scaley(0);
+    }
+
+    .drop-menu .links{
+        top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+    }
+
+    .drop-menu ul li:hover{
+        background-color: white;
+    }
+
+
+    .drop-menu.active{
+        transform: scaleY(1);
     }
 }
