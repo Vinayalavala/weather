@@ -10,22 +10,35 @@
 </head>
 <body>
     <header>
-        <h1  class="logo">Weather-App</h1><br>
+        <h1  class="logo">Weather</h1>
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <img src="menu-burger.png"  class="menu-bars" alt="">
+            <nav>
+                <ul class ="links">
+                    <li a href="#">Home</li>
+                    <li a href="#">Projects</li>
+                    <li a href="#">About</li>
+                </ul>
+            </nav>
+            <a href="#" class="btn"><button>Contact</button><a>
+    </header>
+
+    <div class="drop-menu">
         <nav>
             <ul class ="links">
                 <li a href="#">Home</li>
-                <li a href="#">About Us</li>
+                <li a href="#">Services</li>
+                <li a href="#">About</li>
                 <li a href="#">Contact</li>
             </ul>
         </nav>
-        <input type="checkbox" class="checkbox" id="checkbox">
-        <a href="#" class="btn"><button>Contact</button><a>
-    </header>
-   <div class="card">
-    <div class="search">
-        <input type="text" placeholder="Enter a city name" spellcheck="false">
-        <button><img src="search.png"></button>
     </div>
+
+   <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter a city name" spellcheck="false" style="color:black">
+            <button><img src="search.png"></button>
+        </div>
     <div class="error">
         <p></p>
     </div>
@@ -40,14 +53,14 @@
                     <p class="humidity">--%</p>
                     <p>Humidity</p>
                 </div>
-            </div>
+            </div><br>
             <div class="col">
                 <img src="wind.png">
                 <div>
                     <p class="wind">-- KMPH</p>
                     <p>Wind-Speed</p>
                 </div>
-            </div>
+            </div><br>
             <div class="col">
                 <img src="air.png">
                 <div>
