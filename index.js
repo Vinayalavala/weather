@@ -8,11 +8,17 @@ async function checkweather(city){
     const response=await fetch(apiurl + city+`&appid=${apikey}`);
     var data=await response.json()
     console.log(data)
+    document.querySelector(".temp_max").innerHTML=data.main.temp_max+ "°c";
+    document.querySelector(".temp_min").innerHTML=data.main.temp_min + "°c";
     document.querySelector(".city").innerHTML=data.name
     document.querySelector(".temp").innerHTML=Math.round(data.main.temp) + "°c";
     document.querySelector(".humidity").innerHTML=data.main.humidity  + "%";
     document.querySelector(".wind").innerHTML=data.wind.speed + "KM/H";
     document.querySelector(".pressure").innerHTML=data.wind.speed + "pa";
+    document.querySelector(".gust").innerHTML=data.wind.gust + "";
+    document.querySelector(".feels_like").innerHTML=data.main.feels_like + "°c";
+    document.querySelector(".ground_level").innerHTML=data.main.grnd_level + "";
+    document.querySelector(".sea_level").innerHTML=data.main.sea_level + "";
 
     if(data.weather[0].main=="Clouds"){
         weatherIcon.src="clouds.png"
