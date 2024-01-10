@@ -295,6 +295,7 @@ button:hover{
         justify-content: space-evenly;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-right:10px;
     }
 
     .details img{
