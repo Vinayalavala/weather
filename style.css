@@ -11,6 +11,10 @@ body{
     transition: ease 0.3s; 
 }
 
+.air-img{
+    filter:invert(100%)
+}
+
 .drop-menu{
     display: none;
 }
