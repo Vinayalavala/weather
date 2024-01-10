@@ -7,7 +7,7 @@
 
 body{
     align-items: center;
-    background: black;
+    background: rgb(48, 47, 47);
     transition: ease 0.3s; 
 }
 
@@ -29,7 +29,7 @@ body{
     left: 15%;
     backdrop-filter: blur(10px);
     width: 65%;
-    background: rgba(195, 180, 180, 0.2);
+    background: rgba(0, 0, 0, 0.2);
     box-shadow:inset -3px -3px 5px rgb(0, 0, 0),inset 5px 5px 5px rgba(197, 199, 198,0.1);
     color:#fff;
     padding: 40px 35px;
@@ -55,7 +55,7 @@ body{
     box-shadow:3px 3px 5px rgb(15, 15, 15), -3px -3px 5px rgb(161, 165, 162);
     border: 0;
     outline: 0;
-    background-color: #5b6060;
+    background-color: transparent;
     color:#ffffff;
     padding: 7px 50px ;
     padding-right: 10px;
@@ -70,7 +70,7 @@ body{
 .search button{
     border: 0;
     outline: 0;
-    background-color: #626766;
+    background-color: transparent;
     box-shadow: 3px 3px 5px rgb(15, 15, 15), -3px -3px 5px rgb(161, 165, 162);
     border-radius: 100%;
     width: 60px;
