@@ -73,3 +73,51 @@ const dropMenu = document.querySelector('.drop-menu');
 menuBars.addEventListener('click', function() {
     dropMenu.classList.toggle('active');
 });
+
+const lastLocation = localStorage.getItem("lastLocation");
+
+if (lastLocation) {
+    searchbox.value = lastLocation;
+}
+
+function updateLastLocation(city) {
+    localStorage.setItem("lastLocation", city);
+}
+
+searchbutton.addEventListener("click", () => {
+    const city = searchbox.value;
+    updateLastLocation(city); 
+    checkweather(city);
+});
+
+
+if (lastLocation) {
+    checkweather(lastLocation);
+}
+
+
+const body = document.body;
+
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark') {
+    body.style.backgroundColor = 'black';
+    checkbox.checked = true;
+} else {
+    body.style.backgroundColor = 'rgb(45, 42, 42)';
+    checkbox.checked = false;
+}
+
+function updateTheme(theme) {
+    localStorage.setItem('theme', theme);
+}
+
+checkbox.addEventListener('change', function () {
+    if (this.checked) {
+        body.style.backgroundColor = 'black';
+        updateTheme('dark'); 
+    } else {
+        body.style.backgroundColor = 'rgb(45, 42, 42)';
+        updateTheme('light'); 
+    }
+});
