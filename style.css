@@ -24,7 +24,7 @@ body{
     display: none;
 }
 
-.card{ 
+.card{
     position: relative;
     left: 15%;
     backdrop-filter: blur(10px);
@@ -36,7 +36,6 @@ body{
     text-align: center;
     border-radius: 15px;
     overflow: auto;
-    bottom:10px
 }
 
 .search{
@@ -44,6 +43,7 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-between;
+    color: transparent;
 }
 
 .search input:hover{
@@ -59,7 +59,6 @@ body{
     background-color: transparent;
     color:#ffffff;
     padding: 7px 50px ;
-    padding-left:20px;
     padding-right: 10px;
     height: 60px;
     border-radius: 30px;
@@ -183,7 +182,7 @@ button{
     border-left: 50px;
     border: none;
     transition: all 0.3s ease 0s;
-    margin-left: 10px;
+    margin-left: 25px;
 }
 
 button:hover{
@@ -255,6 +254,11 @@ button:hover{
         height: 40px;
     }
 
+    .weather-icon{
+        height: 90px;
+        width: 90px;
+    }
+
     .links{
         display: none;
     }
@@ -265,13 +269,17 @@ button:hover{
         padding: 20px;
         z-index: 99;
         left: 0%;
-        box-shadow:  0 0 10px 5px#24252a ;
+        bottom: 10px;
+        box-shadow: unset;
+        box-shadow:  0 0 10px 5px#323232 ;
+    }
+
+    .card .col{
+        display: flex;
+        flex-direction: row;
     }
     .search input {
-        padding-left: 20px;
-        padding-right:10px;
-        padding-bottom:10px;
-        padding-top:10px;
+        padding: 10px;
         font-size: 16px;
         margin-right:5px;
     }
@@ -283,8 +291,10 @@ button:hover{
     }
 
     .details {
-        display: block;
-        grid-column: auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .details img{
@@ -292,7 +302,9 @@ button:hover{
     }
 
     .col {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: -25px;
     }
 
     .humidity, .wind, .pressure,.temp_max,.temp_min,.feels_like,.gust,.ground_level,.sea_level {
@@ -320,11 +332,6 @@ button:hover{
 
     .btn {
         display: none;
-    }
-
-    .detail.col{
-        height: 20px;
-        padding-top: 40px;
     }
 
     .search input:hover{
@@ -390,5 +397,9 @@ button:hover{
 
     .links li:hover{
         color: #b8b2b2;
+    }
+
+    .col p{
+        font-size: 16px;
     }
 }
