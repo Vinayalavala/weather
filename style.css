@@ -275,7 +275,7 @@ button:hover{
     }
 
     .card .col{
-        display: flex;
+        display: block;
         flex-direction: row;
     }
     .search input {
