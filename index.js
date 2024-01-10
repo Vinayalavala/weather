@@ -63,7 +63,7 @@ const checkbox = document.getElementById('checkbox');
             if (this.checked) {
                 body.style.backgroundColor = 'black'; 
             } else {
-                body.style.backgroundColor = 'rgb(45, 42, 42)'; 
+                body.style.backgroundColor = 'white'; 
             }
         });
 
@@ -101,10 +101,10 @@ const body = document.body;
 const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme === 'dark') {
-    body.style.backgroundColor = 'black';
+    body.style.backgroundColor = 'rgb(48, 47, 47)';
     checkbox.checked = true;
 } else {
-    body.style.backgroundColor = 'rgb(45, 42, 42)';
+    body.style.backgroundColor = 'rgb(172, 163, 163)';
     checkbox.checked = false;
 }
 
@@ -114,10 +114,10 @@ function updateTheme(theme) {
 
 checkbox.addEventListener('change', function () {
     if (this.checked) {
-        body.style.backgroundColor = 'black';
+        body.style.backgroundColor = 'rgb(48, 47, 47)';
         updateTheme('dark'); 
     } else {
-        body.style.backgroundColor = 'rgb(45, 42, 42)';
+        body.style.backgroundColor = 'rgb(172, 163, 163)';
         updateTheme('light'); 
     }
 });
