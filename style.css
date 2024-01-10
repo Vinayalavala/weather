@@ -182,7 +182,7 @@ button{
     border-left: 50px;
     border: none;
     transition: all 0.3s ease 0s;
-    margin-left: 25px;
+    margin-left: 15px;
 }
 
 button:hover{
