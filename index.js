@@ -9,7 +9,7 @@ async function checkweather(city){
     var data=await response.json()
     console.log(data)
     document.querySelector(".temp_max").innerHTML=data.main.temp_max+ "°c";
-    document.querySelector(".temp_min").innerHTML=data.main.temp_min + "°c";
+    document.querySelector(".temp_min").innerHTML=data.main.temp_min+ "°c";
     document.querySelector(".city").innerHTML=data.name
     document.querySelector(".temp").innerHTML=Math.round(data.main.temp) + "°c";
     document.querySelector(".humidity").innerHTML=data.main.humidity  + "%";
