@@ -275,7 +275,7 @@ button:hover{
     }
 
     .card .col{
-        display: block;
+        display: flex;
         flex-direction: row;
     }
     .search input {
@@ -295,7 +295,6 @@ button:hover{
         justify-content: space-evenly;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-right:5px;
     }
 
     .details img{
@@ -303,8 +302,9 @@ button:hover{
     }
 
     .col {
-        display:block
-        margin-right:10px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: -25px;
     }
 
     .humidity, .wind, .pressure,.temp_max,.temp_min,.feels_like,.gust,.ground_level,.sea_level {
