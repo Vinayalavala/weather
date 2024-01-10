@@ -302,7 +302,8 @@ button:hover{
     }
 
     .col {
-        display:block;
+        display:block
+        margin-right:20px;
     }
 
     .humidity, .wind, .pressure,.temp_max,.temp_min,.feels_like,.gust,.ground_level,.sea_level {
