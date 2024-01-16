@@ -179,62 +179,50 @@ checkbox.addEventListener('change', function () {
     }
 });
 
-    // Initialize variables
-    let startTime, endTime;
-    let dataSize = 0; // in bytes
+    let totalBytes = 0;
+    let startTime = null;
 
-    // Function to start the speed calculation
-    function startSpeedCalculation() {
-        dataSize = 0;
-        startTime = new Date();
+    // Function to update data speed
+    function updateDataSpeed() {
+        const currentTime = new Date().getTime();
+        const elapsedTime = (currentTime - startTime) / 1000; // Convert to seconds
+        const dataSpeed = totalBytes / elapsedTime; // Bytes per second
+
+        // Display data speed
+        const speedElement = document.getElementById("speed");
+        speedElement.textContent = `Speed: ${formatBytes(dataSpeed)} /s`;
     }
 
-    // Function to stop the speed calculation and display the result
-    function stopSpeedCalculation() {
-        endTime = new Date();
-        const elapsedTime = (endTime - startTime) / 1000; // Convert to seconds
-        const dataSpeed = dataSize / elapsedTime; // Data speed in bytes per second
+    // Function to format bytes into human-readable format
+    function formatBytes(bytes) {
+        const units = ["B", "KB", "MB", "GB", "TB"];
+        let i = 0;
 
-        // Display the result
-        const resultElement = document.getElementById("result");
-        resultElement.textContent = `Real-time Data Speed: ${formatBytes(dataSpeed)}/s`;
+        while (bytes >= 1024 && i < units.length - 1) {
+            bytes /= 1024;
+            i++;
+        }
+
+        return `${bytes.toFixed(2)} ${units[i]}`;
     }
 
-    // Event listener for the button click
-    const calculateSpeedButton = document.getElementById("calculateSpeedButton");
-    calculateSpeedButton.addEventListener("click", function () {
-        // Simulate data transfer (e.g., fetching data from a server)
-        simulateDataTransfer();
-    });
-
-    // Function to simulate data transfer (replace this with your actual data transfer logic)
+    // Function to simulate data transfer and update speed
     function simulateDataTransfer() {
-        startSpeedCalculation();
+        const intervalId = setInterval(function () {
+            // Simulate receiving data (increase totalBytes)
+            totalBytes += Math.floor(Math.random() * 100000); // Random value between 0 and 100,000 bytes
 
-        // Simulate fetching data (e.g., fetching 5 MB data)
-        fetch('https://example.com/large-data-file')
-            .then(response => {
-                return response.blob();
-            })
-            .then(blobData => {
-                dataSize += blobData.size;
-                stopSpeedCalculation();
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
+            // Update data speed
+            updateDataSpeed();
+        }, 1000); // Update every 1 second
+
+        // Set a timeout to stop the simulation after 10 seconds (adjust as needed)
+        setTimeout(function () {
+            clearInterval(intervalId);
+        }, 10000); // Stop after 10 seconds
     }
 
-    // Function to format bytes into a human-readable format
-    function formatBytes(bytes, decimals = 2) {
-        if (bytes === 0) return '0 Bytes';
-
-        const k = 1024;
-        const dm = decimals < 0 ? 0 : decimals;
-        const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-
-        const i = Math.floor(Math.log(bytes) / Math.log(k));
-
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
-    }
+    // Start simulation when the page loads
+    startTime = new Date().getTime();
+    simulateDataTransfer();
 
