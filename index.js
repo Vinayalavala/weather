@@ -1,28 +1,58 @@
+function updateSignalIcon() {
+    const signalStatus = document.getElementById('signal-status');
+    const isConnected = navigator.onLine;
+    const connectionType = navigator.connection ? navigator.connection.type : null;
+
+    if (isConnected) {
+        if (connectionType === 'wifi') {
+            signalStatus.innerHTML = '<img src="wifi-icon.png" alt="WiFi" class="signal-icon">';
+        } else {
+            signalStatus.innerHTML = '<img src="mobile-data-icon.png" alt="Mobile Data" class="signal-icon">';
+        }
+    } else {
+        signalStatus.innerHTML = '<img src="disconnected-icon.png" alt="Disconnected" class="signal-icon">';
+    }
+}
+
+updateSignalIcon();
+
+window.addEventListener('online', updateSignalIcon);
+window.addEventListener('offline', updateSignalIcon);
+
 
 setTimeout(function () {
     document.querySelector(".loader-wrapper").style.display = "none";
 }, 2000);
 
-// Check Internet Connection
+function showNotification(message) {
+    if ('Notification' in window) {
+        Notification.requestPermission().then(function (permission) {
+            if (permission === 'granted') {
+                new Notification(message);
+            }
+        });
+    }
+}
+
 function checkConnection() {
     const isConnected = navigator.onLine;
     const disconnectedContainer = document.getElementById('disconnected-container');
 
     if (!isConnected) {
-        // Show the disconnected container
         disconnectedContainer.style.display = 'flex';
     } else {
-        // Hide the disconnected container if the connection is available
         disconnectedContainer.style.display = 'none';
+
+        showNotification('Your internet connection is live!');
     }
 }
 
-// Check connection on page load
 checkConnection();
 
-// Set up an event listener to check the connection status dynamically
 window.addEventListener('online', checkConnection);
 window.addEventListener('offline', checkConnection);
+
+
 
 
 const apikey="ba707aac3c6c866490c9f22ada735ba3";
