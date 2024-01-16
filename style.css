@@ -260,7 +260,7 @@ button:hover{
     align-items: center;
 }
 
-.logo {
+.icon {
     width: 80px; /* Adjust the size as needed */
     height: 80px;
     margin-right: 20px; /* Adjust the spacing between the logo and the loader */
