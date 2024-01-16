@@ -1,3 +1,8 @@
+setTimeout(function () {
+    document.querySelector(".loader-wrapper").style.display = "none";
+}, 2000);
+
+
 const apikey="ba707aac3c6c866490c9f22ada735ba3";
 const apiurl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const searchbox=document.querySelector(".search input")
