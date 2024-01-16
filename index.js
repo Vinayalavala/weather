@@ -179,45 +179,62 @@ checkbox.addEventListener('change', function () {
     }
 });
 
-let startTime;
-        let totalBytes = 0;
+    // Initialize variables
+    let startTime, endTime;
+    let dataSize = 0; // in bytes
 
-        function startMeasurement() {
-            startTime = new Date();
-            totalBytes = 0;
-            updateSpeed();
-        }
+    // Function to start the speed calculation
+    function startSpeedCalculation() {
+        dataSize = 0;
+        startTime = new Date();
+    }
 
-        function updateSpeed() {
-            const currentTime = new Date();
-            const elapsedTime = (currentTime - startTime) / 1000; // in seconds
+    // Function to stop the speed calculation and display the result
+    function stopSpeedCalculation() {
+        endTime = new Date();
+        const elapsedTime = (endTime - startTime) / 1000; // Convert to seconds
+        const dataSpeed = dataSize / elapsedTime; // Data speed in bytes per second
 
-            const speed = totalBytes / elapsedTime;
-            const formattedSpeed = formatBytes(speed) + '';
+        // Display the result
+        const resultElement = document.getElementById("result");
+        resultElement.textContent = `Real-time Data Speed: ${formatBytes(dataSpeed)}/s`;
+    }
 
-            document.getElementById('speed').innerText = `Current Data Speed: ${formattedSpeed}`;
+    // Event listener for the button click
+    const calculateSpeedButton = document.getElementById("calculateSpeedButton");
+    calculateSpeedButton.addEventListener("click", function () {
+        // Simulate data transfer (e.g., fetching data from a server)
+        simulateDataTransfer();
+    });
 
-            setTimeout(updateSpeed, 1000);
-        }
+    // Function to simulate data transfer (replace this with your actual data transfer logic)
+    function simulateDataTransfer() {
+        startSpeedCalculation();
 
-        function formatBytes(bytes) {
-            const units = ['B/s', 'KB/s', 'MB/s', 'GB/s'];
-            let i = 0;
+        // Simulate fetching data (e.g., fetching 5 MB data)
+        fetch('https://example.com/large-data-file')
+            .then(response => {
+                return response.blob();
+            })
+            .then(blobData => {
+                dataSize += blobData.size;
+                stopSpeedCalculation();
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
 
-            while (bytes > 1024 && i < units.length - 1) {
-                bytes /= 1024;
-                i++;
-            }
+    // Function to format bytes into a human-readable format
+    function formatBytes(bytes, decimals = 2) {
+        if (bytes === 0) return '0 Bytes';
 
-            return bytes.toFixed(2) + ' ' + units[i];
-        }
+        const k = 1024;
+        const dm = decimals < 0 ? 0 : decimals;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
 
-        function onDataTransfer(bytes) {
-            totalBytes += bytes;
-        }
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
 
-        setInterval(function() {
-            onDataTransfer(1024 * 1024); 
-        }, 500);
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+    }
 
-        startMeasurement();
