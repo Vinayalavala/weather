@@ -475,7 +475,7 @@ p {
         left: 50px;
         transition: ease 0.3s;
         position: sticky;
-        transform: translatey(-50px);
+        transform: translatey(-70px);
     }
 
     .drop-menu .links{
