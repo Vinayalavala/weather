@@ -178,3 +178,46 @@ checkbox.addEventListener('change', function () {
         updateTheme('light'); 
     }
 });
+
+let startTime;
+        let totalBytes = 0;
+
+        function startMeasurement() {
+            startTime = new Date();
+            totalBytes = 0;
+            updateSpeed();
+        }
+
+        function updateSpeed() {
+            const currentTime = new Date();
+            const elapsedTime = (currentTime - startTime) / 1000; // in seconds
+
+            const speed = totalBytes / elapsedTime;
+            const formattedSpeed = formatBytes(speed) + '';
+
+            document.getElementById('speed').innerText = `Current Data Speed: ${formattedSpeed}`;
+
+            setTimeout(updateSpeed, 1000);
+        }
+
+        function formatBytes(bytes) {
+            const units = ['B/s', 'KB/s', 'MB/s', 'GB/s'];
+            let i = 0;
+
+            while (bytes > 1024 && i < units.length - 1) {
+                bytes /= 1024;
+                i++;
+            }
+
+            return bytes.toFixed(2) + ' ' + units[i];
+        }
+
+        function onDataTransfer(bytes) {
+            totalBytes += bytes;
+        }
+
+        setInterval(function() {
+            onDataTransfer(1024 * 1024); 
+        }, 500);
+
+        startMeasurement();
