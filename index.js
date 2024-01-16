@@ -1,6 +1,28 @@
+
 setTimeout(function () {
     document.querySelector(".loader-wrapper").style.display = "none";
 }, 2000);
+
+// Check Internet Connection
+function checkConnection() {
+    const isConnected = navigator.onLine;
+    const disconnectedContainer = document.getElementById('disconnected-container');
+
+    if (!isConnected) {
+        // Show the disconnected container
+        disconnectedContainer.style.display = 'flex';
+    } else {
+        // Hide the disconnected container if the connection is available
+        disconnectedContainer.style.display = 'none';
+    }
+}
+
+// Check connection on page load
+checkConnection();
+
+// Set up an event listener to check the connection status dynamically
+window.addEventListener('online', checkConnection);
+window.addEventListener('offline', checkConnection);
 
 
 const apikey="ba707aac3c6c866490c9f22ada735ba3";
@@ -29,7 +51,7 @@ async function checkweather(city){
         weatherIcon.src="clouds.png"
     }
     if(data.weather[0].main=="Clear"){
-        weatherIcon.src="sun.png"
+        weatherIcon.src="clear.png"
     }
     if(data.weather[0].main=="Rain"){
         weatherIcon.src="rain.png"
