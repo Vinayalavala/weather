@@ -242,11 +242,61 @@ button:hover{
     box-shadow:inset 0 0  7px #000000;
     background: white;
 }
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.logo-loader {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px; /* Adjust the size as needed */
+    height: 80px;
+    margin-right: 20px; /* Adjust the spacing between the logo and the loader */
+}
+
+.loader {
+    border: 8px solid #3498db;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    border-bottom: 8px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 
 @media only screen and (max-width: 480px) {
     body{
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .loader {
+        width: 30px;
+        height: 30px;
+        border-width: 5px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
     }
     
     header{
@@ -260,7 +310,10 @@ button:hover{
         height: 40px;
     }
 
-    .button
+    .button:active{
+        color: initial;
+        background-color: initial;
+    }
 
     .weather-icon{
         height: 90px;
@@ -397,15 +450,13 @@ button:hover{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        color: white;
         text-decoration: none;
     }
 
     .drop-menu ul li:active{
-        background-color: initial;
         color: initial;
+        background-color: initial;
         background-color: rgba(0, 0, 0, 0.15);
-        color: white;
     }
 
 
@@ -414,12 +465,21 @@ button:hover{
     }
 
     .links li:active{
-        color: #ffffff;
         background-color: initial;
         color: initial;
     }
 
     .col p{
         font-size: 16px;
+    }
+
+    .drop-menu ul li:active{
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+
+
+    .drop-menu ul li {
+        background-color: transparent;
+        color: rgb(255, 255, 255);
     }
 }
