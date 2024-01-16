@@ -303,9 +303,18 @@ p {
     margin: 10px 0;
 }
 
-/* Add additional styles as needed */
+.signal-status {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #3498db;
+}
 
-
+.signal-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px;
+    margin-right: 5px;
+}
 @media only screen and (max-width: 480px) {
     body{
         -webkit-tap-highlight-color: transparent;
