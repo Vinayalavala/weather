@@ -179,50 +179,53 @@ checkbox.addEventListener('change', function () {
     }
 });
 
-    let totalBytes = 0;
-    let startTime = null;
+     function calculateDataSpeed() {
+            const dataSize = 1024; // 1 KB in bytes
+            let totalData = 0;
+            let startTime = performance.now();
 
-    // Function to update data speed
-    function updateDataSpeed() {
-        const currentTime = new Date().getTime();
-        const elapsedTime = (currentTime - startTime) / 1000; // Convert to seconds
-        const dataSpeed = totalBytes / elapsedTime; // Bytes per second
+            setInterval(() => {
+                const currentTime = performance.now();
+                const elapsedTime = (currentTime - startTime) / 1000; // Convert to seconds
 
-        // Display data speed
-        const speedElement = document.getElementById("speed");
-        speedElement.textContent = `Speed: ${formatBytes(dataSpeed)} /s`;
-    }
+                const dataSpeed = totalData / elapsedTime;
+                updateDataSpeed(dataSpeed);
 
-    // Function to format bytes into human-readable format
-    function formatBytes(bytes) {
-        const units = ["B", "KB", "MB", "GB", "TB"];
-        let i = 0;
+                // Reset for the next interval
+                totalData = 0;
+                startTime = currentTime;
+            }, 1000); // Update every 1 second
 
-        while (bytes >= 1024 && i < units.length - 1) {
-            bytes /= 1024;
-            i++;
+            // Simulate data transfer (for demonstration purposes)
+            setInterval(() => {
+                const randomDataSize = Math.floor(Math.random() * 1024); // Random data size (up to 1 KB)
+                totalData += randomDataSize;
+            }, 100); // Add random data every 0.1 second
         }
 
-        return `${bytes.toFixed(2)} ${units[i]}`;
-    }
+        // Function to update the displayed data speed
+        function updateDataSpeed(speed) {
+            const speedElement = document.getElementById('data-speed');
+            speedElement.textContent = formatDataSize(speed) + '/s';
+        }
 
-    // Function to simulate data transfer and update speed
-    function simulateDataTransfer() {
-        const intervalId = setInterval(function () {
-            // Simulate receiving data (increase totalBytes)
-            totalBytes += Math.floor(Math.random() * 100000); // Random value between 0 and 100,000 bytes
+        // Function to format data size for display
+        function formatDataSize(size) {
+            const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+            let i = 0;
 
-            // Update data speed
-            updateDataSpeed();
-        }, 1000); // Update every 1 second
+            while (size >= 1024 && i < units.length - 1) {
+                size /= 1024;
+                i++;
+            }
 
-        // Set a timeout to stop the simulation after 10 seconds (adjust as needed)
-        setTimeout(function () {
-            clearInterval(intervalId);
-        }, 10000); // Stop after 10 seconds
-    }
+            return size.toFixed(2) + ' ' + units[i];
+        }
 
-    // Start simulation when the page loads
-    startTime = new Date().getTime();
-    simulateDataTransfer();
+        // Start the data speed calculation
+        calculateDataSpeed();
+  
+
+
+   
 
