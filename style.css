@@ -316,7 +316,7 @@ p {
     margin-right: 5px;
     margin-left:15px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 680px) {
     body{
         -webkit-tap-highlight-color: transparent;
     }
