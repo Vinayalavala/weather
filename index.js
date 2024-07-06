@@ -179,35 +179,48 @@ checkbox.addEventListener('change', function () {
     }
 });
 
-function calculateDataSpeed() {
-    const dataSize = 1024; // 1 KB in bytes
-    let totalData = 0;
-    let startTime = performance.now();
+     function calculateDataSpeed() {
+            const dataSize = 1024; // 1 KB in bytes
+            let totalData = 0;
+            let startTime = performance.now();
 
-    setInterval(() => {
-        const currentTime = performance.now();
-        const elapsedTime = (currentTime - startTime) / 1000; // Convert to seconds
+            setInterval(() => {
+                const currentTime = performance.now();
+                const elapsedTime = (currentTime - startTime) / 1000; // Convert to seconds
 
-        const dataSpeed = (totalData * 8) / (elapsedTime * 1_000_000); // Convert bytes to Megabits
-        updateDataSpeed(dataSpeed);
+                const dataSpeed = totalData / elapsedTime;
+                updateDataSpeed(dataSpeed);
 
-        // Reset for the next interval
-        totalData = 0;
-        startTime = currentTime;
-    }, 1000); // Update every 1 second
+                // Reset for the next interval
+                totalData = 0;
+                startTime = currentTime;
+            }, 1000); // Update every 1 second
 
-    // Simulate data transfer (for demonstration purposes)
-    setInterval(() => {
-        const randomDataSize = Math.floor(Math.random() * 1024); // Random data size (up to 1 KB)
-        totalData += randomDataSize;
-    }, 100); // Add random data every 0.1 second
-}
+            // Simulate data transfer (for demonstration purposes)
+            setInterval(() => {
+                const randomDataSize = Math.floor(Math.random() * 1024); // Random data size (up to 1 KB)
+                totalData += randomDataSize;
+            }, 100); // Add random data every 0.1 second
+        }
 
-// Function to update the displayed data speed
-function updateDataSpeed(speed) {
-    const speedElement = document.getElementById('data-speed');
-    speedElement.textContent = speed.toFixed(2) + ' Mbps';
-}
+        // Function to update the displayed data speed
+        function updateDataSpeed(speed) {
+            const speedElement = document.getElementById('data-speed');
+            speedElement.textContent = formatDataSize(speed) + '/s';
+        }
 
-// Start the data speed calculation
-calculateDataSpeed();
+        // Function to format data size for display
+        function formatDataSize(size) {
+            const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+            let i = 0;
+
+            while (size >= 1024 && i < units.length - 1) {
+                size /= 1024;
+                i++;
+            }
+
+            return size.toFixed(2) + ' ' + units[i];
+        }
+
+        // Start the data speed calculation
+        calculateDataSpeed();
