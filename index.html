@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="icon.png"style="images/png">
+    <link rel="icon" href="icon.png" style="image/png">
     <link rel="stylesheet" href="style.css">
     <title>Weather</title>
 </head>
@@ -25,130 +25,118 @@
     </div>
     
     <header>
-        <h1  class="logo">Weatherly</h1>
+        <h1 class="logo">Weatherly</h1>
         <input type="checkbox" class="checkbox" id="checkbox">
         
         <div class="signal-status" id="signal-status">
-            <img src="mobile-data-icon.png" >
-            <img src="wifi-icon.png" >
+            <img src="mobile-data-icon.png">
+            <img src="wifi-icon.png">
         </div>
         
-        <img src="menu-burger.png"  class="menu-bars" alt="">
-            <nav>
-                <ul class ="links">
-                    <li a href="http://127.0.0.1:5500/profile-card.html">Home</li>
-                    <li a href="http://127.0.0.1:5500/profile-card.html">Projects</li>
-                    <li a href="">About</li>
-                </ul>
-            </nav>
-            <a href="#" class="btn"><button>Contact</button><a>
+        <img src="menu-burger.png" class="menu-bars" alt="">
+        <nav>
+            <ul class="links">
+                <li><a href="http://127.0.0.1:5500/profile-card.html">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/profile-card.html">Projects</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn"><button>Contact</button></a>
     </header>
 
     <div class="drop-menu">
         <nav>
-            <ul class ="links">
-                <li a href="#">Home</li>
-                <li a href="#">Services</li>
-                <li a href="#">About</li>
-                <li a href="profile-card.html">Contact</li>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="profile-card.html">Contact</a></li>
             </ul>
         </nav>
     </div>
 
-   <div class="card">
+    <div class="card">
         <div class="search">
             <input type="text" placeholder="Enter a city name" spellcheck="false" style="color:white">
             <button><img src="search.png"></button>
         </div>
-    <div class="error">
-        <p></p>
-    </div>
-    <div class="weather">
-        <img src="https://cdn-icons-png.flaticon.com/128/4274/4274438.png" class="weather-icon">
-        <h1 class="temp">--°c</h1>
-        <h2 class="city">--</h2>
-        <div class="details">
-            
-            <div class="col">
-                
-                <div>
-                    <img src="heating.png" class="hot-img">
-                    <p>Max-Temp</p>
-                    <p class="temp_max">--°c</p>
-                </div>
-            </div><br>
-
-            <div class="col">
-                <div>
-                    <img src="low-temperature.png" class="hot-img">
-                    <p>Min-Temp</p>
-                    <p class="temp_min">--°c</p>
-                </div>
-            </div><br>
-
-            <div class="col">
-                <div>
-                    <img src="hot.png" class="hot-img">
-                    <p>Feels_like</p>
-                    <p class="feels_like">--%</p> 
-                </div>
-            </div><br>
-
-            <div class="col">
-                <div>
-                    <img src="humidity.png">
-                    <p>Humidity</p>
-                    <p class="humidity">--%</p>
-                </div>
-            </div><br>
-
-            <div class="col">
-                <div>
-                    <img src="wind.png">
-                    <p>Wind-Spd</p>
-                    <p class="wind">-- KMPH</p>
-                </div>
-            </div><br>
-
-            <div class="col">
-                <div>
-                    <img class="air-img" src="gust.png">
-                    <p>Gust</p>
-                    <p class="gust">--</p>
-                </div>
-            </div><br>
-
-            <div class="col">
-                <div>
-                    <img class="air-img" src="air.png">
-                    <p>pressure</p>
-                    <p class="pressure">--pa</p>
-                </div>
-            </div><br>
-
-            <div class="col">
-                <div>
-                    <img class="air-img" src="level.png">
-                    <p>Gnd_lvl</p>
-                    <p class="ground_level">--</p>
-                </div>
-            </div><br>
-
-            <div class="col">
-                <div class="sea">
-                    <img class="air-img" src="tide.png" class="hot-img">
-                    <p>Sea_lvl</p>
-                    <p class="sea_level">--</p>
-                </div>
-            </div><br>
-
-
-
+        <div class="error">
+            <p></p>
         </div>
-    </div>
-   </div> 
-            <h1>Real-Time Data Speed Calculator</h1>
+        <div class="weather">
+            <img src="https://cdn-icons-png.flaticon.com/128/4274/4274438.png" class="weather-icon">
+            <h1 class="temp">--°c</h1>
+            <h2 class="city">--</h2>
+            <div class="details">
+                <div class="col">
+                    <div>
+                        <img src="heating.png" class="hot-img">
+                        <p>Max-Temp</p>
+                        <p class="temp_max">--°c</p>
+                    </div>
+                </div><br>
+                <div class="col">
+                    <div>
+                        <img src="low-temperature.png" class="hot-img">
+                        <p>Min-Temp</p>
+                        <p class="temp_min">--°c</p>
+                    </div>
+                </div><br>
+                <div class="col">
+                    <div>
+                        <img src="hot.png" class="hot-img">
+                        <p>Feels_like</p>
+                        <p class="feels_like">--%</p> 
+                    </div>
+                </div><br>
+                <div class="col">
+                    <div>
+                        <img src="humidity.png">
+                        <p>Humidity</p>
+                        <p class="humidity">--%</p>
+                    </div>
+                </div><br>
+                <div class="col">
+                    <div>
+                        <img src="wind.png">
+                        <p>Wind-Spd</p>
+                        <p class="wind">-- KMPH</p>
+                    </div>
+                </div><br>
+                <div class="col">
+                    <div>
+                        <img class="air-img" src="gust.png">
+                        <p>Gust</p>
+                        <p class="gust">--</p>
+                    </div>
+                </div><br>
+                <div class="col">
+                    <div>
+                        <img class="air-img" src="air.png">
+                        <p>pressure</p>
+                        <p class="pressure">--pa</p>
+                    </div>
+                </div><br>
+                <div class="col">
+                    <div>
+                        <img class="air-img" src="level.png">
+                        <p>Gnd_lvl</p>
+                        <p class="ground_level">--</p>
+                    </div>
+                </div><br>
+                <div class="col">
+                    <div class="sea">
+                        <img class="air-img" src="tide.png" class="hot-img">
+                        <p>Sea_lvl</p>
+                        <p class="sea_level">--</p>
+                    </div>
+                </div><br>
+            </div>
+        </div>
+    </div> 
+    <h1>Real-Time Data Speed Calculator</h1>
     <p>Data Speed: <span id="data-speed">0 B/s</span></p>
-   <script src="index.js"></script>
+    <button id="toggle-button">Start</button>
+    <script src="index.js"></script>
 </body>
 </html>
