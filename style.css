@@ -164,6 +164,7 @@ header{
     display:flex;
     flex-direction:row;
     padding: 20px 20px;
+    color:white;
     text-decoration:none;
 }
 
@@ -504,6 +505,14 @@ p {
     .links li:active{
         background-color: initial;
         color: initial;
+    }
+
+    .links li{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    color:white;
+    text-decoration:none;
     }
 
     .col p{
