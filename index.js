@@ -112,6 +112,15 @@ searchbutton.addEventListener("click", () => {
     updateLastLocation(city);
 });
 
+// Add event listener for Enter key press
+searchbox.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        const city = searchbox.value;
+        checkWeather(city);
+        updateLastLocation(city);
+    }
+});
+
 function updateLastLocation(city) {
     localStorage.setItem("lastLocation", city);
 }
