@@ -155,29 +155,27 @@ header{
     margin-right: auto;
     color:white;
 }
-
-.links{
+.links {
     list-style: none;
 }
 
-.links li{
-    display:flex;
-    flex-direction:row;
+.links li {
+    display: flex;
+    flex-direction: row;
     padding: 20px 20px;
-    color:white;
-    text-decoration:none;
+    color: white;
+    text-decoration: none;
 }
 
 .links li a {
     transition: all 0.3s ease 0s;
 }
 
-.links li:hover,.links li:active {
+.links li:hover, .links li:active {
     cursor: pointer;
     background-color: initial;
     color: initial;
 }
-
 button{
     background-color: rgb(89, 82, 82);
     box-shadow:  3px 3px 5px rgb(0,36,7), -3px -3px 5px rgb(161, 165, 162);
