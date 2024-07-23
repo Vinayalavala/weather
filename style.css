@@ -500,17 +500,17 @@ p {
         transform: translatey(0px);
     }
 
-    .links li:active{
+    .links li:active {
         background-color: initial;
         color: initial;
     }
 
-    .links li{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    color:white;
-    text-decoration:none;
+    .links li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        text-decoration: none;
     }
 
     .col p{
